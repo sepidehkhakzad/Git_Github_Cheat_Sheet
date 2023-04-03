@@ -9,7 +9,7 @@ This project contains a cheat sheet for Git and GitHub, which summarizes the mos
 
 To view the cheat sheet, simply click on the link below:
 
-[embed]https://github.com/sepidehkhakzad/Git_Github_Cheat_Sheet/blob/main/Github_Cheat_Sheet.pdf[/embed]
+[PDF](https://github.com/sepidehkhakzad/Git_Github_Cheat_Sheet/blob/main/Github_Cheat_Sheet.pdf)
 
 ## Contributing
 
