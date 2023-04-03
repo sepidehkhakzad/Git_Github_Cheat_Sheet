@@ -7,6 +7,10 @@
 
 This project contains a cheat sheet for Git and GitHub, which summarizes the most common Git commands and GitHub features that you'll need as a developer.
 
+<p align="center">
+  <img src="https://github.com/sepidehkhakzad/Git_Github_Cheat_Sheet/blob/main/Github_Cheat_Sheet.png" alt="React logo" width="200" height="200">
+</p>
+
 To view the cheat sheet, simply click on the link below:
 
 [PDF](https://github.com/sepidehkhakzad/Git_Github_Cheat_Sheet/blob/main/Github_Cheat_Sheet.pdf)
@@ -22,3 +26,4 @@ If you would like to contribute to this project, please follow these steps:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
