@@ -1,0 +1,413 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Python Cheat Sheet
+% baposter Landscape Poster
+% LaTeX Template
+% Version 1.0 (11/06/13)
+% baposter Class Created by:
+% Brian Amberg (baposter@brian-amberg.de)
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% Edited by Michelle Cristina de Sousa Baltazar
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------
+
+\documentclass[landscape,a0paper,fontscale=0.285]{baposter} % Adjust the font scale/size here
+\title{Python Cheat Sheet New}
+\usepackage[brazilian]{babel}
+%
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx} % Required for including images
+\graphicspath{{figures/}} % Directory in which figures are stored
+
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{tabu}
+
+\usepackage{mathtools}
+%\usepackage{amsmath} % For typesetting math
+\usepackage{amssymb} % Adds new symbols to be used in math mode
+
+\usepackage{booktabs} % Top and bottom rules for tables
+\usepackage{enumitem} % Used to reduce itemize/enumerate spacing
+\usepackage{palatino} % Use the Palatino font
+\usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
+
+\usepackage{multicol} % Required for multiple columns
+
+\usepackage{hyperref}
+\setlength{\columnsep}{1.5em} % Slightly increase the space between columns
+\setlength{\columnseprule}{0mm} % No horizontal rule between columns
+
+\usepackage{tikz} % Required for flow chart
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{shapes,arrows} % Tikz libraries required for the flow chart in the template
+
+\newcommand{\compresslist}{ % Define a command to reduce spacing within itemize/enumerate environments, this is used right after \begin{itemize} or \begin{enumerate}
+\setlength{\itemsep}{1pt}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+}
+
+% \definecolor{lightblue}{rgb}{0.145,0.6666,1} % Defines the color used for content box headers
+\definecolor{almond}{rgb}{0.94, 0.87, 0.8}
+\definecolor{amethyst}{rgb}{0.6, 0.4, 0.8}
+\definecolor{antiquefuchsia}{rgb}{0.57, 0.36, 0.51}
+\definecolor{applegreen}{rgb}{0.55, 0.71, 0.0}
+\definecolor{asparagus}{rgb}{0.53, 0.66, 0.42}
+\definecolor{babyblueeyes}{rgb}{0.63, 0.79, 0.95}
+\definecolor{babypink}{rgb}{0.96, 0.76, 0.76}
+\definecolor{bananamania}{rgb}{0.98, 0.91, 0.71}
+\definecolor{blanchedalmond}{rgb}{1.0, 0.92, 0.8}
+\definecolor{burlywood}{rgb}{0.87, 0.72, 0.53}
+\definecolor{cambridgeblue}{rgb}{0.64, 0.76, 0.68}
+\definecolor{champagne}{rgb}{0.97, 0.91, 0.81}
+\definecolor{darkkhaki}{rgb}{0.74, 0.72, 0.42}
+\definecolor{darkseagreen}{rgb}{0.56, 0.74, 0.56}
+\definecolor{floralwhite}{rgb}{1.0, 0.98, 0.94}
+\definecolor{antiquewhite}{rgb}{0.98, 0.92, 0.84}
+\definecolor{aurometalsaurus}{rgb}{0.43, 0.5, 0.5}
+
+\begin{document}
+{\fontfamily{helvet}\selectfont
+
+\begin{poster}
+{
+headerborder=closed, % Adds a border around the header of content boxes
+colspacing=0.8em, % Column spacing
+bgColorOne=almond, % Background color for the gradient on the left side of the poster
+bgColorTwo=aurometalsaurus, % Background color for the gradient on the right side of the poster
+borderColor=babypink, % Border color
+headerColorOne=darkseagreen, % Background color for the header in the content boxes (left side)
+headerColorTwo=babypink, % Background color for the header in the content boxes (right side)
+headerFontColor=white, % Text color for the header text in the content boxes
+boxColorOne=white, % Background color of the content boxes
+textborder=roundedleft, % Format of the border around content boxes, can be: none, bars, coils, triangles, rectangle, rounded, roundedsmall, roundedright or faded
+eyecatcher=true, % Set to false for ignoring the left logo in the title and move the title left
+headerheight=0.1\textheight, % Height of the header
+headershape=roundedright, % Specify the rounded corner in the content box headers, can be: rectangle, small-rounded, roundedright, roundedleft or rounded
+headerfont=\Large\bf\textsc, % Large, bold and sans serif font in the headers of content boxes
+%textfont={\setlength{\parindent}{1.5em}}, % Uncomment for paragraph indentation
+linewidth=2pt % Width of the border lines around content boxes
+}
+%----------------------------------------------------------------
+%	TÍTULO
+%----------------------------------------------------------------
+{\bf\textsc{Git and Github Cheat Sheet}\vspace{0.5em}} % Poster title
+{\textsc{\{ Git \ \ \ \ \ \& \ \ \ \ \   Github \ \ \ \ \ Cheat \ \ \ \ \ Sheet\} \hspace{12pt}}}
+{\textsc{Sepideh K. Gharamaleki  \hspace{12pt}}} 
+
+
+%------------------------------------------------
+% Git Config
+%------------------------------------------------
+\headerbox{Config, Create and Branch}{name=objectives,column=0,row=0}{
+
+%--------------------------------------
+\colorbox[HTML]{A3C1AD}{\makebox[\textwidth-2\fboxsep][l]{\bf - Git Config}}
+\begin{itemize}\compresslist
+\item git config ${--}$global user.email “youremail”
+\item Make vscode default instead of VIM:\\
+git config ${--}$global core.editor "code ${--}$--wait"
+
+\end{itemize}
+
+
+%--------------------------------------
+%--------------------------------------
+\colorbox[HTML]{A3C1AD}{\makebox[\textwidth-2\fboxsep][l]{\bf - SSH Config}}
+\begin{itemize}
+\item Click \href{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys}{here.}
+\end{itemize}
+
+%--------------------------------------
+\colorbox[HTML]{A3C1AD}{\makebox[\textwidth-2\fboxsep][l]{\bf - Create Repo:}}
+\begin{itemize}\compresslist
+\item git status
+\item git init 
+
+
+\end{itemize}
+
+%--------------------------------------
+
+%--------------------------------------
+\colorbox[HTML]{A3C1AD}{\makebox[\textwidth-2\fboxsep][l]{\bf - Commit:}}
+\begin{itemize}\compresslist
+\item git add file
+
+\item git commit -m “message”/ git commit 
+
+
+
+\end{itemize}
+
+%--------------------------------------
+
+%--------------------------------------
+\colorbox[HTML]{A3C1AD}{\makebox[\textwidth-2\fboxsep][l]{\bf - Log:}}
+\begin{itemize}\compresslist
+\item git log ${--}$oneline
+
+
+\end{itemize}
+
+%--------------------------------------
+
+%--------------------------------------
+\colorbox[HTML]{A3C1AD}{\makebox[\textwidth-2\fboxsep][l]{\bf - Fixing Commits (just one commit ago)}}
+\begin{itemize}\compresslist
+\item git add forgotten\_file
+\item git commit –amend
+
+
+
+\end{itemize}
+
+%-------------------------------------
+%--------------------------------------
+\colorbox[HTML]{A3C1AD}{\makebox[\textwidth-2\fboxsep][l]{\bf - Create and Switch to Branch}}
+\begin{itemize}\compresslist
+\item git checkout -b branchname
+
+
+\item git switch -c branchname
+
+\item If switch before committing changes: doesn’t work if the file is shared between the branches. Refer to stashing changes. 
+
+\end{itemize}
+
+%-------------------------------------
+
+%--------------------------------------
+\colorbox[HTML]{A3C1AD}{\makebox[\textwidth-2\fboxsep][l]{\bf - Manipulating Branches}}
+\begin{itemize}\compresslist
+\item Delete:
+git branch -d or -D if branch is not commited
+\item Rename:
+Switch to branch first: git branch -m newbranchname
+\item Merge branches:
+We merge to HEAD.
+git merge branchname
+\item 
+git branch -v : shows branchnames hash of commit last commit
+\item If conflicts: resolve then add and commit the changes.
+
+
+\end{itemize}
+
+% %--------------------------------------
+% \colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf - Entrada de Dados:}}
+% %\begin{tabular}{lp{2.0cm}lp{3.0cm}|}
+
+% \begin{tabular}{lp{5.3cm}lp{3.0cm}|}
+% A = input() & Aguarda a entrada de caracteres armazenados em A \\
+% \end{tabular}
+% \begin{tabular}{lp{4.7cm}lp{3.0cm}|}
+% B = int(input()) & Aguarda a entrada de inteiros armazenados em B \\
+% \end{tabular}
+% \begin{tabular}{lp{2.6cm}lp{3.0cm}|}
+% A,B = map(int,input().split()) & Aguarda a entrada de inteiros  separados por espaço, armazenados em A e B respectivamente \\
+% \end{tabular}
+% \begin{tabular}{lp{3.0cm}lp{3.0cm}|}
+% input("Pressione ENTER") & Aguarda pressionar ENTER para prosseguir - como não declarou nenhuma variável, não irá gravar nada. \\
+% \end{tabular}
+
+\vspace{0.0em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
+}
+
+%------------------------------------------------
+% Lógica Básica do Python
+%------------------------------------------------
+
+\headerbox{Monitor changes}{name=montiorchanges,column=1,row=0,span=2}{
+
+%--------------------------------------
+\colorbox[HTML]{A3C1AD}{\makebox[\textwidth-2\fboxsep][l]{\bf - Manipulating Commits}}
+\begin{itemize}\compresslist
+\item Comparing changes:\\
+git diff (commits or files or …)
+\item Stashing:
+When you have uncommited changes on one branch and want to jump to another:\\git stash
+\item Getting back in time:\\
+git checkout hashofanoldcommit/HEAD$\sim$1..n\\
+- Results in detached head
+To get rid of everything after the last commit:
+git checkout HEAD 
+\item To get rid of everything after any commit:
+git reset/revert hashofcommit
+\item Revert keeps the commits that are deleted cause it makes a new commit.
+
+
+
+\end{itemize}
+
+
+\colorbox[HTML]{A3C1AD}{\makebox[\textwidth-2\fboxsep][l]{\bf - Rebase}}
+\begin{itemize}\compresslist
+\item  To merge commits and delete the history of the merged commits:
+git rebase master
+\item Merge conflicts are resolved with instructions git gives you.
+
+\item Rebase to rewrite commits:\\
+git rebase -i HEAD~4
+\end{itemize}
+}
+% %--------------------------------------
+\headerbox{Github}{name=github,column=1,row=0.42, span=2, bottomaligned=objectives}{
+
+%--------------------------------------
+\begin{itemize}\compresslist
+\item 
+git remote add origin url
+\end{itemize}
+
+\colorbox[HTML]{A3C1AD}{\makebox[\textwidth-2\fboxsep][l]{\bf - Push}}
+\begin{itemize}\compresslist
+\item 
+git push origin <branch>
+
+\end{itemize}
+
+\colorbox[HTML]{A3C1AD}{\makebox[\textwidth-2\fboxsep][l]{\bf - Fetch}}
+\begin{itemize}\compresslist
+\item Accessing changes on repo without having to commit on local repo. => Fetch:\\
+git fetch origin branch
+\item to see the changes:\\ git checkout origin/branchname
+\item git pull origin branch= git fetch+ git merge
+\item wherever you run git pull, the branch will merge there.
+Before pushing, pull to see if anyone made changes
+
+
+\item To resolve conflicts when you pull request:\\
+\hspace*{0.15cm} - git fetch origin\\
+\hspace*{0.15cm} - git switch my-new-feature\\
+\hspace*{0.15cm} - git merge master\\
+\hspace*{0.15cm} - fix conflicts!\\
+\hspace*{0.15cm} - git switch master\\
+\hspace*{0.15cm} - git merge my-new-feature\\
+\hspace*{0.15cm} - git push origin master
+\end{itemize}
+\vspace{0.0em} 
+
+
+
+}
+
+% %--------------------------------------
+\headerbox{Misc.}{name=misc,column=3,row=0}{
+
+%--------------------------------------
+\colorbox[HTML]{A3C1AD}{\makebox[\textwidth-2\fboxsep][l]{\bf - Tagging}}
+\begin{itemize}\compresslist
+\item 
+List all tags: git tag
+\item Switch to a tag: git checkout tagname
+\item Difference bet. Tags: git diff tagname1 tagname2
+\item Create tag: git tag tagname/ git tag -a tagname
+\item Earlier commits: git tag tagname commithash
+\item You have to push tags: git push ${--}$tags
+
+\end{itemize}
+
+\colorbox[HTML]{A3C1AD}{\makebox[\textwidth-2\fboxsep][l]{\bf - Reflogging}}
+\begin{itemize}\compresslist
+\item displays a log of all the local reference updates made in your repo.
+\item git reflog show Head
+\item Reflogs only local logs and expire after 90 days.
+\item To retrieve previous commits you can use reflog:git reset –hard master@\{1\}
+\item You can undo rebase with reflog.	
+
+
+\end{itemize}
+
+\colorbox[HTML]{A3C1AD}{\makebox[\textwidth-2\fboxsep][l]{\bf - Aliasing}}
+\begin{itemize}\compresslist
+\item Alter ~/.gitconfig file. 
+\item Can be done on terminal too. 
+\item git config ${--}$global alias.nameofalias nameof function
+
+
+\end{itemize}
+
+
+}
+
+
+% %------------------------------------------------
+% % Listas no Python
+% %------------------------------------------------
+
+% \headerbox{Listas no Python}{name=results,column=2,span=2,row=0}{
+
+% \colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf - Listas no Python}}
+% \linebreak \\
+% Listas são compostas por elementos de qualquer tipo (podem ser alteradas) \linebreak \\
+% \begin{tabular}{@{}ll@{}}
+% \textbf{Manipulação de Listas no Python}\\
+% \multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Criação} \\
+% uma\_lista = [5,3,'p',9,'e'] & cria: [5,3,'p',9,'e'] \\
+% \multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Acessando} \\
+% uma\_lista[0] & retorna: 5 \\
+% \multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Fatiando} \\
+% uma\_lista[1:3] & retorna: [3,'p'] \\
+% \multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Comprimento} \\
+% len(uma\_lista) & retorna: 5 \\
+% \multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}count( item)} \\
+% \multicolumn{2}{l}{Retorna quantas vezes o item foi encontrado na lista.} \\
+% cont(uma\_lista('p') & retorna: 1 \\
+% \multicolumn{2}{l}{Pode ser usado juntamente com a função while para 'andar' pelo comprimento da lista:} \\
+% while x < len(uma\_lista): & retorna: [3,'p']\\
+% \multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Ordenar - sort()} \\
+% uma\_lista.sort() & retorna: [3,5,9,'e','p'] \\
+% \multicolumn{2}{l}{Ordenar sem alterar a lista} \\
+% print(sorted(uma\_lista)) & retorna: [3,5,9,'e','p'] \\
+% \multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Adicionar - append(item)} \\
+% uma\_lista.append(37) & retorna: [5,3,'p',9,'e',37] \\
+% \multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Inserir - insert(position,item)} \\
+% insert(uma\_lista.append(3),200) & retorna: [5,3,200,'p',9,'e'] \\
+% \multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Retornar e remover - pop(position)} \\
+% uma\_lista.pop() & retorna: 'e' e a lista fica [5,3,'p',9] - remove o último elemento \\
+% uma\_lista.pop(1) & retorna: 3 e a lista fica [5,'p',9,'e'] - remove o elemento 1 \\
+% \multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Remover - remove(item)} \\
+% uma\_lista.remove('p') & retorna: [5,3,9,'e'] \\
+% \multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Inserir} \\
+% uma\_lista.insert(2,'z') & retorna: [5,'z',3,'p',9,'e'] - insere na posição numerada \\
+% \multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Inverter - reverse()} \\
+% reverse(uma\_lista) & retorna: ['e',9,'p',3,5] \\
+% \multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Concatenar} \\
+% uma\_lista+[0] & retorna: [5,3,'p',9,'e',0] \\
+% uma\_lista+uma\_lista & retorna: [5,3,'p',9,'e',5,3,'p',9,'e'] \\
+% \multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Encontrar} \\
+% 9 in uma\_lista & retorna: True \\
+% for x in uma\_lista & retorna toda a lista, um elemento por linha \\
+% ......print(x) &  
+% \end{tabular}
+% %------------------------------------------------
+% }
+\end{poster}
+
+
+%-----------------------------------
+}
+%----------------------------------------------------------------
+%	REFERENCES  {name=objectives,column=0,row=0}
+%----------------------------------------------------------------
+%\headerbox{bb}{name=references,column=1,row=0}{}
+%----------------------------------------------------------------
+%	FUTURE RESEARCH
+%----------------------------------------------------------------
+%\headerbox{aa}{name=futureresearch,column=1,row=0}{}
+%----------------------------------------------------------------
+%	CONTACT INFORMATION
+%----------------------------------------------------------------
+%\headerbox{Contact Information}{name=contact,column=2,span=2,row=0}{}
+%----------------------------------------------------------------
+
+
+\end{document}
